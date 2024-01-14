@@ -1,0 +1,34 @@
+/** $background-principal: #d5c3a6;
+$background-secundario: #c13134;
+$background-terciario: #9b89a9;
+**/
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 150px;
+    background-color: $background-secundario;
+  }
+  header nav {
+    display: flex;
+    width: 100%;
+  }
+  header nav ul {
+    display: flex;
+    width: 100%;
+    justify-content: space-evenly;
+    list-style: none;
+    text-shadow: 1px 1px black;
+  }
+  header nav ul li {
+    display: flex;
+  }
+  header nav ul li a {
+    text-decoration: none;
+    color: $background-principal;
+    font-size: 25px;
+  }
+  header nav ul li a:hover {
+    color: $background-terciario;
