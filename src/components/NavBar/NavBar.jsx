@@ -4,7 +4,7 @@ import Logo from "../Logo/Logo";
 
 function NavBar() {
   return (
-    <nav>
+    <nav classname={styles.navbar}>
       <Logo />
       <ul>
         <li>

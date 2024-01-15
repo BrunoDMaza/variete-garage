@@ -1,4 +1,4 @@
-const productos = [
+export const productos = [
   { id: 1, producto: "Cámara Kodak Brownie", precio: 15, cantidad: 2 },
   { id: 2, producto: "Radio de tubos Philco", precio: 50, cantidad: 1 },
   { id: 3, producto: "Máquina de escribir Underwood", precio: 75, cantidad: 3 },
