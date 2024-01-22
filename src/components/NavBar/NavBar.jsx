@@ -1,12 +1,12 @@
 import CardWidget from "../CardWidget/CardWidget";
-import styles from "./NavBar.module.css";
+import styles from "./NavBar.module.scss";
 import Logo from "../Logo/Logo";
 
 function NavBar() {
   return (
-    <nav classname={styles.navbar}>
+    <div className={styles.navbar}>
       <Logo />
-      <ul>
+      <ul className={styles.links}>
         <li>
           <a href="#">Nosotros</a>
         </li>
@@ -15,7 +15,7 @@ function NavBar() {
         </li>
       </ul>
       <CardWidget />
-    </nav>
+    </div>
   );
 }
 

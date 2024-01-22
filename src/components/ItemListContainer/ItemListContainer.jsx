@@ -1,18 +1,29 @@
 import React, { useState, useEffect } from "react";
-import { products } from "../../utils/MockData";
+import { getProductsAsync } from "../../utils/MockData";
 import ItemList from "../ItemList/ItemList";
+import Spinner from "../Spinner/Spinner";
 
 const ItemListContainer = ({}) => {
   const [items, setItems] = useState([]);
+  const [loading, setLoading] = useState(true);
+
   useEffect(() => {
-    setItems(products);
+    getProductsAsync().then((products) => {
+      setItems(products);
+      setLoading(false);
+      console.log(products);
+    });
   }, []);
-  return (
-    <div>
-      <ItemList itemsList={items} />
-      <h1>"Hola ItemListContainer "</h1>
-    </div>
-  );
+
+  // return loading ? (
+  //   <Spinner />
+  // ) : (
+  //   <>
+  //     <ItemList itemList={items} />
+  //   </>
+  // );
 };
+
+ItemListContainer.propTypes = {};
 
 export default ItemListContainer;
