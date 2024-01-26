@@ -8,6 +8,7 @@ const ItemListContainer = ({}) => {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
+    fetch("fakestoreapi.com/products/${id}").then((res) => res.json);
     getProductsAsync().then((products) => {
       setItems(products);
       setLoading(false);
@@ -15,13 +16,13 @@ const ItemListContainer = ({}) => {
     });
   }, []);
 
-  // return loading ? (
-  //   <Spinner />
-  // ) : (
-  //   <>
-  //     <ItemList itemList={items} />
-  //   </>
-  // );
+  return loading ? (
+    <Spinner />
+  ) : (
+    <>
+      <ItemList itemList={items} />
+    </>
+  );
 };
 
 ItemListContainer.propTypes = {};
