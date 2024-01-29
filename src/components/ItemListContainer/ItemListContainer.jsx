@@ -8,7 +8,10 @@ const ItemListContainer = ({}) => {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    fetch("fakestoreapi.com/products/${id}").then((res) => res.json);
+    // fetch("fakestoreapi.com/products/${id}").then((res) => res.json);
+    fetch("fakestoreapi.com/products/${id}")
+      .then((res) => console.log("RESPONSE….", res))
+      .then((res) => console.log("JSON….", res.json()));
     getProductsAsync().then((products) => {
       setItems(products);
       setLoading(false);

@@ -1,7 +1,7 @@
 import React from "react";
 import styles from "./Item.module.scss";
 
-const Item = ({ name, price, image }) => {
+const Item = ({ id, name, description, price, stock, image }) => {
   return (
     <div className={styles.item}>
       <div className={styles.item_image}>
